@@ -13,6 +13,11 @@ body {
   overflow-x: hidden;
 }
 
+button {
+  cursor: pointer;
+  border: none;
+}
+
 .row {
   width: 100%;
   max-width: 1280px;
@@ -282,6 +287,7 @@ FEATURES ↓
 }
 
 .section_para {
+  font-size: 18px;
   font-weight: 500;
   color: #7c8ba1;
   line-height: 1.625;
@@ -305,8 +311,8 @@ FEATURES ↓
   text-transform: uppercase;
 }
 
-#features .section_title {
-  font-size: 48px;
+#features .section_title,
+#pricing .section_title {
   text-align: center;
 }
 
@@ -366,10 +372,6 @@ QUALITY WORK ↓
 
 #quality .section_title {
   line-height: 1.25;
-}
-
-.section_para {
-  font-size: 18px;
 }
 
 .quality_description {
@@ -478,6 +480,76 @@ VALUES ↓
   align-items: center;
 }
 
+#values .section_title {
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+
+.values_description {
+  width: 50%;
+  padding: 32px 64px 32px 0;
+}
+
+.values_list {
+  display: flex;
+}
+
+.value {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.value_title {
+  display: flex;
+  align-items: center;
+}
+
+.value:nth-child(1) .value_img-wrapper {
+  background-color: #9ae6b4;
+}
+
+.value:nth-child(2) .value_img-wrapper {
+  background-color: #feb2b2;
+}
+
+.value_img-wrapper {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+}
+
+.value_name {
+  margin-left: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #243e63;
+}
+
+.value_para {
+  margin-top: 16px;
+  line-height: 1.625;
+  color: #718096;
+}
+
+#values .btn {
+  margin-top: 48px;
+  display: inline-block;
+}
+
+.values_img-wrapper {
+  width: 50%;
+}
+
+.dollar_sign {
+  height: 20px;
+  width: 20px;
+}
+
 /*
 
 PRICING ↓
@@ -488,6 +560,175 @@ PRICING ↓
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#pricing .section_para {
+  max-width: 576px;
+  text-align: center;
+}
+
+.plans {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.plan {
+  position: relative;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 24rem;
+  border-radius: 0.5rem;
+  background-color: rgb(255, 255, 255);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-right: 2rem;
+  padding-top: 0.5rem;
+  text-align: center;
+  color: rgb(26, 32, 44);
+  box-shadow:
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.plan:nth-child(1) .plan_stripe,
+.plan:nth-child(1) .plan_button {
+  color: #f7fafc;
+  background: linear-gradient(
+    115deg,
+    rgb(56, 178, 172) 0%,
+    rgb(129, 230, 217) 100%
+  );
+}
+
+.plan:nth-child(1) .plan_middle,
+.plan:nth-child(3) .plan_middle {
+  border-top: 2px solid rgb(229, 231, 235);
+  border-bottom: 2px solid rgb(229, 231, 235);
+}
+
+.plan:nth-child(2) {
+  background: linear-gradient(
+    135deg,
+    rgb(76, 81, 191) 0%,
+    rgb(102, 126, 234) 100%
+  );
+}
+
+.plan:nth-child(2) .plan_name,
+.plan:nth-child(2) .plan_price,
+.plan:nth-child(2) .plan_target,
+.plan:nth-child(2) .plan_duration,
+.plan:nth-child(2) .plan_feature {
+  color: #f7fafc;
+}
+
+.plan:nth-child(2) .plan_middle {
+  border-top: 2px solid rgb(102, 126, 234);
+  border-bottom: 2px solid rgb(102, 126, 234);
+}
+
+.plan_middle {
+  margin-left: -2rem;
+  margin-right: -2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.plan_bottom {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.plan_button {
+  padding: 0.75rem 2rem;
+  font-weight: 700;
+  transition: all 300ms ease;
+  width: 100%;
+  border-radius: 9999px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.plan_stripe {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  height: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.plan_top {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  line-height: 1.625;
+}
+
+.plan:nth-child(odd) .plan_name,
+.plan:nth-child(odd) .plan_price,
+.plan:nth-child(odd) .plan_target {
+  color: #1a202c;
+}
+
+.plan_target {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.025em;
+}
+
+.plan_feature {
+  margin-top: 20px;
+  font-weight: 500;
+  color: #718096;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.plan_name {
+  font-size: 20px;
+}
+
+.plan_name,
+.plan_price,
+.plan_duration {
+  font-weight: bold;
+  line-height: 1.625;
+}
+
+.plan_price {
+  font-size: 48px;
+  margin: 4px 0;
+}
+
+.plan:nth-child(odd) .plan_duration {
+  color: #a0aec0;
+}
+
+.plan_duration {
+  font-size: 16px;
+  letter-spacing: 0.1em;
+}
+
+.plan:nth-child(3) .plan_stripe,
+.plan:nth-child(3) .plan_button {
+  color: #f7fafc;
+  background: linear-gradient(
+    115deg,
+    rgb(245, 101, 101) 0%,
+    rgb(254, 178, 178) 100%
+  );
 }
 
 /* 
@@ -616,7 +857,8 @@ MOBILE RESPONSIVENESS ↓
 
 @media (max-width: 768px) {
   .quality_description,
-  .steps_description {
+  .steps_description,
+  .values_description {
     padding: 0;
     margin-top: 64px;
     text-align: center;
@@ -628,7 +870,9 @@ MOBILE RESPONSIVENESS ↓
   .quality_description,
   .steps_img-wrapper,
   .steps_description,
-  .quality_img-wrapper {
+  .quality_img-wrapper,
+  .values_img-wrapper,
+  .values_description {
     width: 100%;
     max-width: 448px;
   }
@@ -682,5 +926,40 @@ MOBILE RESPONSIVENESS ↓
   .step_description {
     margin-top: 12px;
     margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .values_list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .value {
+    align-items: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  .plan_bottom {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  #features .section_title,
+  #values .section_title,
+  #pricing .section_title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .plans {
+    flex-wrap: wrap;
+    align-items: center;
   }
 }
