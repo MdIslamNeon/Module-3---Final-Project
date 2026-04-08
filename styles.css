@@ -739,6 +739,33 @@ TESTIMONIALS ↓
 
 #testimonials .row {
   display: flex;
+  justify-content: space-between;
+}
+
+.testimonials_img-wrapper,
+.testimonials_description {
+  width: 50%;
+}
+
+.testimonials_description {
+  margin-left: 64px;
+}
+
+.testimonial {
+  padding-top: 40px;
+}
+
+.testimonial_title {
+  margin-top: 16px;
+  font-weight: 700;
+  line-height: 1.625;
+}
+
+.testimonial_para {
+  margin-top: 16px;
+  margin-bottom: 32px;
+  font-weight: 500;
+  line-height: 1.625;
 }
 
 /* 
@@ -872,6 +899,7 @@ MOBILE RESPONSIVENESS ↓
   .steps_description,
   .quality_img-wrapper,
   .values_img-wrapper,
+  .testimonials_img-wrapper,
   .values_description {
     width: 100%;
     max-width: 448px;
@@ -961,5 +989,14 @@ MOBILE RESPONSIVENESS ↓
   .plans {
     flex-wrap: wrap;
     align-items: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .plans {
+    justify-content: center;
+  }
+  .plan {
+    margin-right: 0px;
   }
 }
